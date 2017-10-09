@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN" "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+  <!-- <class dynamic-insert="false" dynamic-update="false" mutable="true" name="com.jwt.hibernate.bean.User" optimistic-lock="version" polymorphism="implicit" select-before-update="false"/> -->
+    <class name="com.jwt.hibernate.bean.User" table="user">
+        <id column="ID" name="id" type="java.lang.Integer">
+            <generator class="increment"/>  <!-- assigned,native -->
+            <!-- if id(primary key) is a autoIncrement please use "increment" -->
+        </id>
+        <property column="USER_NAME" name="userName" type="java.lang.String" />
+        <property column="PASSWORD" name="password1" type="string" />
+        <property column="EMAIL" name="email" type="java.lang.String" />
+        <property column="PHONE" name="phone" type="java.lang.String" />
+        <property column="CITY" name="city" type="java.lang.String" />
+    </class>
+</hibernate-mapping>
